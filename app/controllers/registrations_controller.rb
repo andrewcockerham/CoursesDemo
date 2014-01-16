@@ -28,12 +28,20 @@ class RegistrationsController < ApplicationController
   # POST /registrations.json
   def create
     # @course_id = pa
-    @student_email = params[:student_email]
-    @student_id = Student.find_by_email(@student_email).id
-    # @registration.student_id = @student.id
     @registration = Registration.new(registration_params)
-    @registration.student_id = @student_id
-    
+
+    @student_email = params[:student_email]
+    if Student.find_by_email(@student_email) ## student exists
+      @student_id = Student.find_by_email(@student_email).id
+      @registration.student_id = @student_id
+    else # create new student with that email
+      @new_student = Student.new(email: @student_email)
+      @new_student.save
+      @registration.student_id = @new_student.id
+    end
+    # @registration.student_id = @student.id
+    # @registration = Registration.new(registration_params)
+
     respond_to do |format|
       if @registration.save
         format.html { redirect_to @registration, notice: 'Registration was successfully created.' }
