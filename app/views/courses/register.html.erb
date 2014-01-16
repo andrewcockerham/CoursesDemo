@@ -1,0 +1,10 @@
+<p><strong>Title:</strong><%= @course.title %></p>
+<p><strong>Description:</strong><%= @course.description %></p>
+<p><strong>Teacher:</strong><%= @course.teacher %></p>
+
+<%= form_tag(courses_path, controller: "courses", action: "register") do %>
+	<%= email_field(:student, :email) %>
+	<%= submit_tag %>
+<% end %>
+
+<%= link_to 'Back', courses_path %>

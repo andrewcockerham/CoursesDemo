@@ -15,6 +15,9 @@ class RegistrationsController < ApplicationController
   # GET /registrations/new
   def new
     @registration = Registration.new
+    @course = Course.find(params[:id])
+    @student_email = params[:student_email]
+    @student = Student.find_by_email(@student_email)
   end
 
   # GET /registrations/1/edit
@@ -24,8 +27,13 @@ class RegistrationsController < ApplicationController
   # POST /registrations
   # POST /registrations.json
   def create
+    # @course_id = pa
+    @student_email = params[:student_email]
+    @student_id = Student.find_by_email(@student_email).id
+    # @registration.student_id = @student.id
     @registration = Registration.new(registration_params)
-
+    @registration.student_id = @student_id
+    
     respond_to do |format|
       if @registration.save
         format.html { redirect_to @registration, notice: 'Registration was successfully created.' }

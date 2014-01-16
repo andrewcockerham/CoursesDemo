@@ -5,6 +5,9 @@ CoursesDemo::Application.routes.draw do
 
   resources :courses
 
+  match 'courses/register/:id', to: 'registrations#new', as: :register, via: [:get, :post]
+  # post 'courses/register/:id', to: 'registrations#new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,5 +1,28 @@
-<h1>New registration</h1>
+<%= simple_form_for(@registration) do |f| %>
+  <% if @registration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@registration.errors.count, "error") %> prohibited this registration from being saved:</h2>
 
-<%= render 'form' %>
+      <ul>
+      <% @registration.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-<%= link_to 'Back', registrations_path %>
+
+<p><strong>Title:</strong><%= @course.title %></p>
+<p><strong>Description:</strong><%= @course.description %></p>
+<p><strong>Teacher:</strong><%= @course.teacher %></p>
+
+<!-- < form_tag(courses_path, controller: "courses", action: "register") do %>
+	< email_field(:student, :email) %>
+	< submit_tag %>
+< end %> -->
+	Email <input name="student_email" type="email"><br>
+	<%= f.hidden_field :course_id, value: params[:id] %>
+<!-- < f.hidden_field :student_id, value: '1' %>  -->
+<%= f.submit %>
+<%= link_to 'Back', courses_path %>
+<% end %>
