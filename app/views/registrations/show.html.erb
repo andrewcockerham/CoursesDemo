@@ -7,7 +7,7 @@
 
 <p>
   <strong>Course:</strong>
-  <%= @registration.course_id %>
+  <%= Course.find(@registration.course_id).title %>
 </p>
 
 <%= link_to 'Edit', edit_registration_path(@registration) %> |
