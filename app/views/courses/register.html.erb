@@ -1,3 +1,4 @@
+<!-- This is not in use -->
 <p><strong>Title:</strong><%= @course.title %></p>
 <p><strong>Description:</strong><%= @course.description %></p>
 <p><strong>Teacher:</strong><%= @course.teacher %></p>
@@ -6,5 +7,5 @@
 	<%= email_field(:student, :email) %>
 	<%= submit_tag %>
 <% end %>
-
-<%= link_to 'Back', courses_path %>
+<br>
+<%= link_to 'Back', courses_path %><br>

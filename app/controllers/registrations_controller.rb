@@ -45,6 +45,10 @@ class RegistrationsController < ApplicationController
     respond_to do |format|
       if @registration.save
         @notice_string = 'Congratulations! You registered for ' + Course.find(@registration.course_id).title 
+        if params[:send_to_skillchest]
+          ## post to skillchest new-registration url
+          @notice_string += 'send'
+        end
         format.html { redirect_to @registration, notice: @notice_string }
         format.json { render action: 'show', status: :created, location: @registration }
       else

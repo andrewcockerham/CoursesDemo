@@ -20,9 +20,11 @@
 	< email_field(:student, :email) %>
 	< submit_tag %>
 < end %> -->
-	Email <input name="student_email" type="email"><br>
-	<%= f.hidden_field :course_id, value: params[:id] %>
+	Email <input name="student_email" type="email" autofocus="true"><br>
+	<%= f.hidden_field :course_id, value: params[:id] %><br>
 <!-- < f.hidden_field :student_id, value: '1' %>  -->
-<%= f.submit %>
+Send Your Class Record to SkillChest? <input name="send_to_skillchest" type="checkbox"><br><br>
+<!-- < f.check_box :send_to_skillchest %> -->
+<%= f.submit %><br>
 <%= link_to 'Back', courses_path %>
 <% end %>
