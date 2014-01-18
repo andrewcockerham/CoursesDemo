@@ -1,0 +1,19 @@
+$body-bg: black;
+$navbar-inverse-bg: #27ae60;
+$navbar-inverse-link-color: white;
+$jumbotron-bg: #bdc3c7;
+
+@import 'bootstrap';
+$body-bg: black;
+
+.jumbotron {
+	opacity: 0.8;
+}
+
+.index {
+	color: white;
+}
+
+.index a:link {
+	color: white;
+}

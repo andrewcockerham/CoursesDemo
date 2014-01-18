@@ -1,4 +1,6 @@
 CoursesDemo::Application.routes.draw do
+  root "pages#home"
+
   resources :registrations
 
   resources :students
