@@ -48,6 +48,15 @@ class RegistrationsController < ApplicationController
         if params[:send_to_skillchest]
           ## post to skillchest new-registration url
           @notice_string += 'send'
+
+          require "net/http"
+          # params = {'box1' => 'Nothing is less important than which fork you use. Etiquette is the science of living. It embraces everything. It is ethics. It is honor. -Emily Post',
+          # 'button1' => 'Submit'
+          # }
+          # x = Net::HTTP.post_form(URI.parse('localhost:3000/users/new_registration'), params)
+          uri = URI('http://www.google.com')
+          x = Net::HTTP.post_form(uri, params)
+          puts x.body
         end
         format.html { redirect_to @registration, notice: @notice_string }
         format.json { render action: 'show', status: :created, location: @registration }
