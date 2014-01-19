@@ -1,17 +1,17 @@
 body {
   background-color: #fff;
-  // color: #333;
-  color: white;
+  color: red;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  // background: url('/assets/fire_breathing2.jpeg') no-repeat;
-  // background: url('/fire_breathing2.jpeg') no-repeat center;
   background-image: url('/fire_breathing2.jpeg');
   background-repeat:no-repeat;
-  // background-position: center;
   background-size: 100%;
 }
+// color: #333;
+// background-position: center;
+// background: url('/assets/fire_breathing2.jpeg') no-repeat;
+// background: url('/fire_breathing2.jpeg') no-repeat center;
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
