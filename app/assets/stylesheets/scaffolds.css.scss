@@ -8,9 +8,10 @@ body {
   // background: url('/assets/fire_breathing2.jpeg') no-repeat;
   // background: url('/fire_breathing2.jpeg') no-repeat center;
   background-image: url('/fire_breathing2.jpeg');
+  background-repeat:no-repeat;
   // background-position: center;
   background-size: 100%;
-  background-position-y: calc(100% - 100px);
+  background-position-y: calc(100% - 1000px);
 }
 
 p, ol, ul, td {
