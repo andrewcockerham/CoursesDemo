@@ -11,7 +11,6 @@
     </div>
   <% end %>
 
-
 <p><strong>Title:</strong><%= @course.title %></p>
 <p><strong>Description:</strong><%= @course.description %></p>
 <p><strong>Teacher:</strong><%= @course.teacher %></p>
@@ -24,6 +23,7 @@
 	<!-- <input name="title" type="hidden" value= -->
 	<%= hidden_field_tag("title", @course.title) %>
 	<%= hidden_field_tag("date_complete", @course.end_date) %>
+	<%= hidden_field_tag("teacher_email", @course.teacher_email) %>
 	<%= f.hidden_field :course_id, value: params[:id] %><br>
 <!-- 	< f.hidden_field :title, value: @course.title %><br>
 	< f.hidden_field :date_complete, value: @course.end_date %><br>
