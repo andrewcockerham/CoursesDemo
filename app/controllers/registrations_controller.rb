@@ -54,7 +54,7 @@ class RegistrationsController < ApplicationController
           # 'button1' => 'Submit'
           # }
           # x = Net::HTTP.post_form(URI.parse('localhost:3000/users/new_registration'), params)
-          uri = URI('agile-everglades-3155.herokuapp.com/users/new_registration')
+          uri = URI('http://agile-everglades-3155.herokuapp.com/users/new_registration')
           x = Net::HTTP.post_form(uri, params)
           puts x.body
         end
