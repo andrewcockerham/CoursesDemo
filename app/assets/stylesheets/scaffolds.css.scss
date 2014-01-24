@@ -4,7 +4,10 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  background-image: url('/fire_breathing2.jpeg');
+  // image-url('fire_breathing2.jpeg')
+  // background-image: url(<%= image_path "/fire_breathing2.jpeg" %>);
+  // background-image: url('/fire_breathing2.jpeg');
+  background-image: image-url('/fire_breathing2.jpeg');
   background-repeat:no-repeat;
   background-size: 100%;
 }
