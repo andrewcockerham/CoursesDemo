@@ -5,7 +5,7 @@ body {
   font-size: 13px;
   line-height: 18px;
   // background-image: url('/fire_breathing2.jpeg');
-  background-image: image-url('/fire_breathing2.jpeg');
+  background-image: image-url('fire_breathing2.jpeg'); // "/" makes a difference where it looks
   background-repeat:no-repeat;
   background-size: 100%;
 }
