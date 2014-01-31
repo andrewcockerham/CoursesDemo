@@ -1,5 +1,6 @@
 CoursesDemo::Application.routes.draw do
   devise_for :students
+  
   root "pages#home"
 
   resources :registrations
