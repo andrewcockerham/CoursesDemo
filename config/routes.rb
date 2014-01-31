@@ -1,13 +1,12 @@
 CoursesDemo::Application.routes.draw do
-  
+  devise_for :students
 
   root "pages#home"
 
   resources :registrations
 
-  resources :students
-  devise_for :students
-  
+  # resources :students
+
   resources :courses
 
   match 'courses/register/:id', to: 'registrations#new', as: :register, via: [:get, :post]
