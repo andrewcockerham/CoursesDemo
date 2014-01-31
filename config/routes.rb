@@ -5,7 +5,7 @@ CoursesDemo::Application.routes.draw do
 
   resources :registrations
 
-  # resources :students
+  resources :students
 
   resources :courses
 
