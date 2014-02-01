@@ -10,7 +10,7 @@ CoursesDemo::Application.routes.draw do
 
   resources :courses
 
-  get 'users/my_courses', => 'courses#my_courses', as: :my_courses
+  get 'users/my_courses' => 'courses#my_courses', as: :my_courses
 
   match 'courses/register/:id', to: 'attendances#new', as: :register, via: [:get, :post]
   # post 'courses/register/:id', to: 'registrations#new'
