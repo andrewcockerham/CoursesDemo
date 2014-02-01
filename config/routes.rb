@@ -1,4 +1,5 @@
 CoursesDemo::Application.routes.draw do
+  devise_for :users
   devise_for :students
 
   root "pages#home"
