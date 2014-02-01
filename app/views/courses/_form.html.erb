@@ -1,4 +1,4 @@
-<%= simple_form_for(@course) do |f| %>
+<%= simple_form_for @course, html: { multipart: true } do |f| %>
   <% if @course.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
@@ -34,6 +34,10 @@
   <div class="field">
     <%= f.label :complete %><br>
     <%= f.input :complete %>
+  </div>
+  <div class="field">
+    <%= f.label :pdf %><br>
+    <%= f.file_field :pdf %>
   </div>
   <div class="actions">
     <%= f.submit %>

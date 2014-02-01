@@ -23,5 +23,11 @@
   <strong>Complete:</strong>
   <%= @course.complete %>
 </p>
+<% if @course.pdf %>
+  <p>
+    <strong>Certificate:</strong>
+    <iframe src=<%= @course.pdf %> width="600" height="780" style="border: none;"> </iframe>
+  </p>
+<% end %>
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
