@@ -4,13 +4,13 @@ CoursesDemo::Application.routes.draw do
 
   root "pages#home"
 
-  resources :registrations
+  resources :attendances
 
   resources :students
 
   resources :courses
 
-  match 'courses/register/:id', to: 'registrations#new', as: :register, via: [:get, :post]
+  match 'courses/register/:id', to: 'attendances#new', as: :register, via: [:get, :post]
   # post 'courses/register/:id', to: 'registrations#new'
 
   # The priority is based upon order of creation: first created -> highest priority.

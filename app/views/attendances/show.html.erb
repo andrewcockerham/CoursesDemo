@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @attendance.student_id %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= Course.find(@attendance.course_id).title %>
+</p>
+
+<%= link_to 'Edit', edit_attendance_path(@attendance) %> |
+<%= link_to 'Back', attendances_path %>
