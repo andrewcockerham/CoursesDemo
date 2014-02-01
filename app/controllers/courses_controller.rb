@@ -3,7 +3,7 @@ class CoursesController < ApplicationController
 
   # my custom actions
   def my_courses
-    @my_courses = Course.find_by_complete(:true)
+    @my_courses = Course.find_all_by_complete(:true)
   end
   ### end custom actions
 
