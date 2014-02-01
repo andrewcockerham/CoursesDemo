@@ -19,6 +19,9 @@
   <strong>End date:</strong>
   <%= @course.end_date %>
 </p>
-
+<p>
+  <strong>Complete:</strong>
+  <%= @course.complete %>
+</p>
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
