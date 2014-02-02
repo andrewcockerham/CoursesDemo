@@ -7,7 +7,7 @@ class CoursesController < ApplicationController
   end
 
   def send_pdf
-    notice: "you sent your pdf to skillchest"
+    format.html { redirect_to my_courses_path, notice: 'you sent your pdf to skillchest' }
   end
   ### end custom actions
 
