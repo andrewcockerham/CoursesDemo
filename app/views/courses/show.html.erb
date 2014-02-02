@@ -40,7 +40,7 @@
     <!-- make this a form, and submit/post the params with it to the controller??
     when i hit the button below, I want to send the param data along with the certificate url to the controller, which will forward it on to skillchest, then redirect to another page -->
 <!--     < link_to 'Send PDF to SkillChest', controller: :courses, action: :send_pdf, method: :submit %> -->
-    <%= f.submit 'Send PDF to SkillChest', controller: :courses, action: :send_pdf %> 
+    <%= f.submit 'Send PDF to SkillChest', controller: :courses, action: :send_pdf, redirect_to my_courses_path %> 
     <!-- , notice: 'sent pdf' , class: 'btn btn-primary'-->
   </p>
 <% end %>
