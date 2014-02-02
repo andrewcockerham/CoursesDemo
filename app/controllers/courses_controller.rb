@@ -30,7 +30,9 @@ class CoursesController < ApplicationController
   # GET /courses/1
   # GET /courses/1.json
   def show
-    send_pdf
+    # send_pdf
+    puts "hi im in hte show"
+    puts params
   end
 
   # GET /courses/new
