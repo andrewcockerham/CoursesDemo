@@ -8,7 +8,7 @@ class CoursesController < ApplicationController
 
   def send_pdf
     require "net/http"
-    # params = asdfa
+    # params[:end_date = ] = asdfa
     puts params
     uri = URI('http://agile-everglades-3155.herokuapp.com/users/receive_pdf')
     x = Net::HTTP.post_form(uri, params)
