@@ -84,4 +84,14 @@ CoursesDemo::Application.configure do
   config.serve_static_assets = true
   config.assets.compile = true
   config.assets.digest = true
+
+  # Sets Paperclip to upload certificates to Amazon S3
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['AWS_BUCKET'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  }
 end

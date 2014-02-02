@@ -37,6 +37,7 @@ gem 'simple_form'
 
 gem 'bootstrap-sass'
 gem 'paperclip'
+gem 'aws-sdk'
 gem 'devise'
 
 group :doc do
