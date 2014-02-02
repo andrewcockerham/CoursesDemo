@@ -9,7 +9,7 @@ class CoursesController < ApplicationController
   def send_pdf
     # format.html { redirect_to my_courses_path, notice: 'you sent your pdf to skillchest' }
     flash[:notice] = 'you sent your pdf to skillchest'
-    echo 'are you there'
+    # echo 'are you there'
     puts 'are you there'
     redirect_to my_courses_path, notice: 'hi'
   end
