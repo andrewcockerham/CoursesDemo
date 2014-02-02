@@ -5,6 +5,10 @@ class CoursesController < ApplicationController
   def my_courses
     @my_courses = Course.find_all_by_complete(:true)
   end
+
+  def send_pdf
+    notice: "you sent your pdf to skillchest"
+  end
   ### end custom actions
 
   def register

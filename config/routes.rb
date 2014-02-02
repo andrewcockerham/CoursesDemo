@@ -15,6 +15,10 @@ CoursesDemo::Application.routes.draw do
   match 'courses/register/:id', to: 'attendances#new', as: :register, via: [:get, :post]
   # post 'courses/register/:id', to: 'registrations#new'
 
+  # this is for sending pdfs to skillchest
+  # match 'courses/:id/'
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
