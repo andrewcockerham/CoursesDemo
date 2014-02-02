@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<%= simple_form_for @course, html: { multipart: true } do |f| %>
 
 <p>
   <strong>Title:</strong>
@@ -29,7 +30,9 @@
     <iframe src=<%= @course.pdf %> width="1000" height="850" style="border: none;"> </iframe>
   </p>
   <p>
-    <%= link_to 'Send PDF to SkillChest', controller: :courses, action: :send_pdf %>
+    <!-- make this a form, and submit/post the params with it to the controller??
+    when i hit the button below, I want to send the param data along with the certificate url to the controller, which will forward it on to skillchest, then redirect to another page -->
+    <%= link_to 'Send PDF to SkillChest', controller: :courses, action: :send_pdf, method: :submit %>
     <!-- , notice: 'sent pdf' , class: 'btn btn-primary'-->
   </p>
 <% end %>
