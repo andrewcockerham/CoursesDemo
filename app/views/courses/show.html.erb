@@ -26,7 +26,10 @@
 <% if @course.pdf %>
   <p>
     <strong>Certificate:</strong>
-    <iframe src=<%= @course.pdf %> width="600" height="780" style="border: none;"> </iframe>
+    <iframe src=<%= @course.pdf %> width="1200" height="780" style="border: none;"> </iframe>
+  </p>
+  <p>
+    <%= link_to 'Send PDF to SkillChest', my_courses_path, class: 'btn btn-primary' %>
   </p>
 <% end %>
 <%= link_to 'Edit', edit_course_path(@course) %> |
