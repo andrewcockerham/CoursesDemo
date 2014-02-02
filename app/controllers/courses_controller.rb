@@ -7,12 +7,12 @@ class CoursesController < ApplicationController
   end
 
   def send_pdf
-    # require "net/http"
+    require "net/http"
     # params = asdfa
-    # params[:]
-    # uri = URI('http://agile-everglades-3155.herokuapp.com/users/receive_pdf')
-    # x = Net::HTTP.post_form(uri, params)
-    # puts x.body
+    puts params
+    uri = URI('http://agile-everglades-3155.herokuapp.com/users/receive_pdf')
+    x = Net::HTTP.post_form(uri, params)
+    puts x.body
     redirect_to my_courses_path, notice: 'you sent your pdf to skillchest'
   end
   ### end custom actions
