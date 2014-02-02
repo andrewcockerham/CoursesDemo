@@ -29,7 +29,8 @@
     <iframe src=<%= @course.pdf %> width="1200" height="780" style="border: none;"> </iframe>
   </p>
   <p>
-    <%= link_to 'Send PDF to SkillChest', controller: :courses, action: :send_pdf, class: 'btn btn-primary', notice: 'sent pdf' %>
+    <%= link_to 'Send PDF to SkillChest', class: 'btn btn-primary', controller: :courses, action: :send_pdf %>
+    <!-- , notice: 'sent pdf' -->
   </p>
 <% end %>
 <%= link_to 'Edit', edit_course_path(@course) %> |
