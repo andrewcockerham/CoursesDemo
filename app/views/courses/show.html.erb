@@ -26,7 +26,7 @@
 <% if @course.pdf %>
   <p>
     <strong>Certificate:</strong>
-    <iframe src=<%= @course.pdf %> width="1200" height="780" style="border: none;"> </iframe>
+    <iframe src=<%= @course.pdf %> width="1000" height="850" style="border: none;"> </iframe>
   </p>
   <p>
     <%= link_to 'Send PDF to SkillChest', controller: :courses, action: :send_pdf %>

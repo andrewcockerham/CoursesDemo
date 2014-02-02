@@ -11,7 +11,7 @@ class CoursesController < ApplicationController
     flash[:notice] = 'you sent your pdf to skillchest'
     echo 'are you there'
     puts 'are you there'
-    # redirect_to @attendance, notice: @notice_string
+    redirect_to my_courses_path, notice: 'hi'
   end
   ### end custom actions
 

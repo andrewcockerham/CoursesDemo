@@ -16,7 +16,7 @@ CoursesDemo::Application.routes.draw do
   # post 'courses/register/:id', to: 'registrations#new'
 
   # this is for sending pdfs to skillchest
-  match 'courses/:id/send_pdf', to: 'courses#send_pdf', via: [:post]
+  match 'courses/:id/send_pdf', to: 'courses#send_pdf', as: :send_pdf, via: [:post]
 
   
   # The priority is based upon order of creation: first created -> highest priority.
