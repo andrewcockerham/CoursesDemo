@@ -7,6 +7,6 @@ class Course < ActiveRecord::Base
 
 	has_attached_file :pdf
 
-	validates_attachment_content_type :pdf, content_type: {'application/pdf'},
-																		size: { less_than 10.megabytes }
+	validates_attachment_content_type :pdf, content_type: ['application/pdf']
+																		#size: { less_than 10.megabytes }
 end
