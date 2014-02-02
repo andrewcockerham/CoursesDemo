@@ -4,30 +4,36 @@
 <p>
   <strong>Title:</strong>
   <%= @course.title %>
+  <%= f.hidden_field :title %>
 </p>
 
 <p>
   <strong>Description:</strong>
   <%= @course.description %>
+  <%= f.hidden_field :description %>
 </p>
 
 <p>
   <strong>Teacher:</strong>
   <%= @course.teacher %>
+  <%= f.hidden_field :teacher %>
 </p>
 
 <p>
   <strong>End date:</strong>
   <%= @course.end_date %>
+  <%= f.hidden_field :end_date %>
 </p>
 <p>
   <strong>Complete:</strong>
   <%= @course.complete %>
+  <%= f.hidden_field :complete %>
 </p>
 <% if @course.pdf %>
   <p>
     <strong>Certificate:</strong>
     <iframe src=<%= @course.pdf %> width="1000" height="850" style="border: none;"> </iframe>
+    <!-- < f.hidden_field :pdf_url %> -->
   </p>
   <p>
     <!-- make this a form, and submit/post the params with it to the controller??
