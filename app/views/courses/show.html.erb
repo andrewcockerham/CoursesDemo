@@ -1,34 +1,35 @@
-<%= simple_form_for @course, html: { multipart: true } do |f| %>
+<!-- < simple_form_for @course, html: { multipart: true } do |f| %> -->
+<%= form_tag({controller: "courses", action: "send_pdf"}, method: "post") %>
 <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Title:</strong>
   <%= @course.title %>
-  <%= f.hidden_field :title %>
+  <!-- < f.hidden_field :title %> -->
 </p>
 
 <p>
   <strong>Description:</strong>
   <%= @course.description %>
-  <%= f.hidden_field :description %>
+  <!-- < f.hidden_field :description %> -->
 </p>
 
 <p>
   <strong>Teacher:</strong>
   <%= @course.teacher %>
-  <%= f.hidden_field :teacher %>
+  <!-- < f.hidden_field :teacher %> -->
 </p>
 
 <p>
   <strong>End date:</strong>
   <%= @course.end_date %>
-  <%= f.hidden_field :end_date %>
+  <!-- < f.hidden_field :end_date %> -->
   <% params[:end_date] = @course.end_date %>
 </p>
 <p>
   <strong>Complete:</strong>
   <%= @course.complete %>
-  <%= f.hidden_field :complete %>
+  <!-- < f.hidden_field :complete %> -->
 </p>
 <% if @course.pdf %>
   <p>
@@ -40,10 +41,12 @@
     <!-- make this a form, and submit/post the params with it to the controller??
     when i hit the button below, I want to send the param data along with the certificate url to the controller, which will forward it on to skillchest, then redirect to another page -->
 <!--     < link_to 'Send PDF to SkillChest', controller: :courses, action: :send_pdf, method: :submit %> -->
-    <%= f.submit 'Send PDF to SkillChest', controller: :courses, action: :send_pdf %> 
-    <!-- , notice: 'sent pdf' , class: 'btn btn-primary'-->
+    <%= f.submit 'Send PDF to SkillChest'%> 
+    <!-- , notice: 'sent pdf' , class: 'btn btn-primary'
+, controller: :courses, action: :send_pdf 
+  -->
   </p>
 <% end %>
-<% end %> <!-- end form -->
+<!-- < end %> --> <!-- end form -->
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
