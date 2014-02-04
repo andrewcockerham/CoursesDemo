@@ -35,7 +35,13 @@
   <p>
     <strong>Certificate:</strong>
     <iframe src=<%= @course.pdf %> width="1000" height="850" style="border: none;"> </iframe>
-    <!-- < f.hidden_field :pdf_url %> -->
+    <% s3 = AWS::S3.new %>
+    <% bucket = s3.buckets['PDF_transfer'] %>
+    <% bucket.objects.each do |obj| %>
+      <%= puts obj.key %>
+    <%end%>
+<!--     < obj = s3.buckets['PDF_transfer'].objects['John_Smith_Firebreathing_101_Certificate.pdf'] %> -->
+    <!-- < hidden_field_tag(:pdf_url, @course.pdf.url %> -->
   </p>
   <p>
     <!-- make this a form, and submit/post the params with it to the controller??
