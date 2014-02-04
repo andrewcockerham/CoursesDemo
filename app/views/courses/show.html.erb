@@ -39,9 +39,7 @@
     <% bucket = s3.buckets['PDF_transfer'] %> 
     <% @course.pdf.s3_object %>
     <% obj = s3.buckets['PDF_transfer'].objects['courses/pdfs/000/000/001/original/John_Smith_Firebreathing_101_Certificate.pdf'] %>
-    <!-- < url = bucket.objects.obj.url_for(:read, :expires => 10*60) %> -->
-    <%= puts url %>
-    <% hidden_field_tag(:pdf_url, url) %>
+ 
   </p>
   <p>
     <!-- make this a form, and submit/post the params with it to the controller??
