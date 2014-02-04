@@ -36,7 +36,8 @@
     <strong>Certificate:</strong>
     <iframe src=<%= @course.pdf %> width="1000" height="850" style="border: none;"> </iframe>
     <% s3 = AWS::S3.new %>
-
+    <% bucket = s3.buckets['PDF_transfer'] %> 
+    <% @course.pdf.s3_object %>
     <% obj = s3.buckets['PDF_transfer'].objects['courses/pdfs/000/000/001/original/John_Smith_Firebreathing_101_Certificate.pdf'] %>
     <% url = bucket.objects.obj.url_for(:read, :expires => 10*60) %>
     <%= puts url %>
