@@ -10,7 +10,7 @@ class CoursesController < ApplicationController
     require "net/http"
     # params[:end_date = ] = asdfa
     puts params
-    uri = URI('http://agile-everglades-3155.herokuapp.com/users/receive_pdf')
+    uri = URI('http://agile-everglades-3155.herokuapp.com/users/receive_certificate')
     x = Net::HTTP.post_form(uri, params)
     puts x.body
     redirect_to my_courses_path, notice: 'you sent your pdf to skillchest'
