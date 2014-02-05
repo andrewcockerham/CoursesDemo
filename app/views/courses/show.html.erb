@@ -38,7 +38,9 @@
     <% s3 = AWS::S3.new %>
     <% bucket = s3.buckets['PDF_transfer'] %> 
     <% url = @course.pdf.s3_object.url_for(:read, :expires => 10*60) %>
+    <% key = @course.pdf.s3_object.key %>
     <%= puts url %>
+    <%= puts key %>
     <% obj = s3.buckets['PDF_transfer'].objects['courses/pdfs/000/000/001/original/John_Smith_Firebreathing_101_Certificate.pdf'] %>
     <% puts 'hi i made a url' %>
     <%= hidden_field_tag(:pdf_url, url) %>
