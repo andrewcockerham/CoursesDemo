@@ -34,15 +34,12 @@
 <% if @course.pdf %>
   <p>
     <strong>Certificate:</strong>
-    <iframe src=<%= @course.pdf %> width="1000" height="850" style="border: none;"> </iframe>
-<!--     < s3 = AWS::S3.new %>
-    < bucket = s3.buckets['PDF_transfer'] %>  -->
+    <iframe src=<%= @course.pdf %> width="1000" height="750" style="border: none;"> </iframe>
     <% url = @course.pdf.s3_object.url_for(:read, :expires => 10*60) %>
     <!-- < key = @course.pdf.s3_object.key %> -->
     <%= puts url %>
     <!-- < puts key %> -->
     <%= hidden_field_tag(:pdf_url, url) %>
-    <!-- < hidden_field_tag(:pdf_key, key) %> -->
   </p>
   <p>
     <%= hidden_field_tag(:student_email, current_user.email) %>
@@ -55,6 +52,5 @@
   -->
   </p>
 <% end %>
-<!-- < end %> --> <!-- end form -->
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
