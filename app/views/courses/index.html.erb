@@ -19,7 +19,7 @@
         <td><%= course.title %></td>
         <td><%= course.description %></td>
         <td><%= course.teacher %></td>
-        <td><%= course.end_date %></td>
+        <td width='200px'><%= course.end_date %></td>
         <td><%= link_to 'Register', register_path(course), class: 'btn btn-warning' %></td>
         <td><%= link_to 'Show', course %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
