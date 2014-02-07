@@ -34,7 +34,7 @@
 <% if @course.pdf %>
   <p>
     <strong>Certificate:</strong>
-    <iframe src=<%= @course.pdf %> width="1000" height="750" style="border: none;"> </iframe>
+    <iframe src=<%= @course.pdf %> width="1000" height="775" style="border: none;"> </iframe>
     <% url = @course.pdf.s3_object.url_for(:read, :expires => 10*60) %>
     <!-- < key = @course.pdf.s3_object.key %> -->
     <%= puts url %>

@@ -1,4 +1,4 @@
-<h1>My Complete Courses</h1>
+<h1>My Completed Courses</h1>
 
 <table>
   <thead>
@@ -7,9 +7,6 @@
       <th>Description</th>
       <th>Teacher</th>
       <th>End date</th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
@@ -21,9 +18,6 @@
         <td><%= course.teacher %></td>
         <td><%= course.end_date %></td>
         <td><%= link_to 'Register', register_path(course), class: 'btn btn-warning' %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
