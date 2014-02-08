@@ -4,7 +4,7 @@ $navbar-inverse-link-color: white;
 $jumbotron-bg: #bdc3c7;
 $font-color: white;
 // $well-bg: #27ae60;
-$well-border: #27ae60;
+// $well-border: #27ae60;
 
 @import 'bootstrap';
 
@@ -14,7 +14,8 @@ $well-border: #27ae60;
 
 .well {
 	// opacity: 0.6;   .well-lg
-	background-color: rgba(39, 174, 96, 0.6) 
+	background-color: rgba(39, 174, 96, 0.6);
+	border: none;
 }
 
 .field {
