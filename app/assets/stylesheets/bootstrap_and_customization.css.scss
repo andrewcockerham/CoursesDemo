@@ -9,7 +9,8 @@ $font-color: white;
 @import 'bootstrap';
 
 .jumbotron {
-	opacity: 0.8;
+	// opacity: 0.8;
+	background-color: rgba(39, 174, 96, 0.6);
 }
 
 .well {
