@@ -11,15 +11,15 @@
     </div>
   <% end %>
 
-<p><strong>Title:</strong><%= @course.title %></p>
-<p><strong>Description:</strong><%= @course.description %></p>
-<p><strong>Teacher:</strong><%= @course.teacher %></p>
+<p><strong>Title: </strong><%= @course.title %></p>
+<p><strong>Description: </strong><%= @course.description %></p>
+<p><strong>Teacher: </strong><%= @course.teacher %></p>
 
 <!-- < form_tag(courses_path, controller: "courses", action: "register") do %>
 	< email_field(:student, :email) %>
 	< submit_tag %>
 < end %> -->
-	Email <input name="student_email" type="email" autofocus="true"><br>
+	Sign up with your email <input name="student_email" type="email" autofocus="true"><br>
 	<!-- <input name="title" type="hidden" value= -->
 	<%= hidden_field_tag("title", @course.title) %>
 	<%= hidden_field_tag("date_complete", @course.end_date) %>
@@ -31,6 +31,6 @@
 <!-- < f.hidden_field :student_id, value: '1' %>  -->
 Send Your Class Record to SkillChest? <input name="send_to_skillchest" type="checkbox"><br><br>
 <!-- < f.check_box :send_to_skillchest %> -->
-<%= f.submit "Register", class: 'btn btn-warning' %><br>
-<%= link_to 'Back', courses_path %>
+<%= f.submit "Register", class: 'btn btn-warning' %><br><br>
+<!-- < link_to 'Back', courses_path %> -->
 <% end %>
