@@ -13,7 +13,7 @@ class CoursesController < ApplicationController
     uri = URI('http://agile-everglades-3155.herokuapp.com/users/receive_certificate')
     x = Net::HTTP.post_form(uri, params)
     puts x.body
-    redirect_to my_courses_path, notice: 'you sent your pdf to skillchest'
+    redirect_to my_courses_path, notice: 'You have sent your pdf to SkillChest'
   end
   ### end custom actions
 
