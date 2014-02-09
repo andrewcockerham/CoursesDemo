@@ -17,7 +17,7 @@
         <td><%= course.description %></td>
         <td><%= course.teacher %></td>
         <td><%= course.end_date %></td>
-        <td><%= link_to 'Register', register_path(course), class: 'btn btn-warning' %></td>
+        <td><%= link_to 'View Certificate', course, class: 'btn btn-warning' %></td>
       </tr>
     <% end %>
   </tbody>
