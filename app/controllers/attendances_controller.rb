@@ -44,7 +44,7 @@ class AttendancesController < ApplicationController
 
     respond_to do |format|
       if @attendance.save
-        # @notice_string = 'Congratulations! You registered for ' + Course.find(@attendance.course_id).title 
+        @notice_string = 'Congratulations! You registered for ' + Course.find(@attendance.course_id).title 
         if params[:send_to_skillchest]
           ## post to skillchest new-attendance url
           # @notice_string += 'send'
