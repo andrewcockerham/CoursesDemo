@@ -31,7 +31,7 @@
   <%= @course.complete %>
   <!-- < f.hidden_field :complete %> -->
 </p>
-<% if @course.pdf %>
+<% if @course.pdf_file_name %>
   <p>
     <strong>Certificate:</strong>
     <iframe src=<%= @course.pdf %> width="1000" height="775" style="border: none;"> </iframe>
