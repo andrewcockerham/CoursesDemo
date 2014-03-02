@@ -44,7 +44,7 @@
   <p>
     <%= hidden_field_tag(:student_email, current_user.email) %>
     <!-- Institution_ID on skillchest.com -->
-    <%= hidden_field_tag(:institution_id, 1) %>
+    <%= hidden_field_tag(:institution_id, '1') %>
     <%= puts 'institution_id' %>
     <!-- make this a form, and submit/post the params with it to the controller??
     when i hit the button below, I want to send the param data along with the certificate url to the controller, which will forward it on to skillchest, then redirect to another page -->
