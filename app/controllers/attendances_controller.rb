@@ -55,6 +55,7 @@ class AttendancesController < ApplicationController
           # }
           # x = Net::HTTP.post_form(URI.parse('localhost:3000/users/new_registration'), params)
           uri = URI('http://www.skillchest.com/users/new_registration')
+          puts uri
           x = Net::HTTP.post_form(uri, params)
           puts x.body
         end
