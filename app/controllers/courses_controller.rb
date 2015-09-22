@@ -2,7 +2,7 @@ class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, except: [:index]
 
-  # my custom actions
+  ### my custom actions
   def my_courses
     @my_courses = Course.find_all_by_complete(:true)
   end
