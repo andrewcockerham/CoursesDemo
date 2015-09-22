@@ -1,4 +1,4 @@
 == README
 
-This is a demo rails application that integrates with SkillChest.com to schedule? and send/receive certificates. It demonstrates how an educational organization can send verified certificates directly into SkillChest automatically.
+This is a demo rails application that integrates with SkillChest.com to schedule and send/receive certificates. It demonstrates how an educational organization can send verified certificates directly into SkillChest automatically.
 
