@@ -31,7 +31,7 @@ class AttendancesController < ApplicationController
     @attendance = Attendance.new(attendance_params)
 
     @student_email = params[:student_email]
-    if Student.find_by_email(@student_email) ## student exists
+    if Student.find_by_email(@student_email) # student exists
       @student_id = Student.find_by_email(@student_email).id
       @attendance.student_id = @student_id
     else # create new student with that email
@@ -44,13 +44,13 @@ class AttendancesController < ApplicationController
 
     respond_to do |format|
       if @attendance.save
-        @notice_string = 'Congratulations! You registered for ' + Course.find(@attendance.course_id).title 
+        @notice_string = 'Congratulations! You registered for ' + Course.find(@attendance.course_id).title
         if params[:send_to_skillchest]
           ## post to skillchest new-attendance url
           # @notice_string += 'send'
 
           require "net/http"
-          # params = {'box1' => 'Nothing is less important than which fork you use. Etiquette is the science of living. It embraces everything. It is ethics. It is honor. -Emily Post',
+          # params = {'box1' => '',
           # 'button1' => 'Submit'
           # }
           # x = Net::HTTP.post_form(URI.parse('localhost:3000/users/new_registration'), params)

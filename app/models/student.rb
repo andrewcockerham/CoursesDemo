@@ -4,7 +4,7 @@ class Student < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-	# Associatoins
+	# Associations
 	has_many :attendances
 	has_many :courses, through: :attendances
 end

@@ -1,4 +1,5 @@
 == README
 
-This is a demo rails application that integrates with SkillChest.com to schedule and send/receive certificates. It demonstrates how an educational organization can send verified certificates directly into SkillChest automatically.
+Learn Firebreathing! This is a demo of a small educational organization that provides classes and completion certificates.
 
+It is a fully functional rails application that integrates with SkillChest.com to schedule and send/receive student certificates. It demonstrates how an educational organization can send verified certificates directly into SkillChest automatically.
